@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TODOApp</string>
+    <string name="tab_text_1">List</string>
+    <string name="tab_text_2">Done</string>
+    <string name="alarm_description">Description</string>
+    <string name="date_text">Date</string>
+    <string name="time_text">Time</string>
+    <string name="add">Add</string>
+    <string name="new_alarm_page_title">New TODO</string>
+    <string name="alarm_page_title">TODO</string>
+    <string name="snooze">Snooze</string>
+</resources>

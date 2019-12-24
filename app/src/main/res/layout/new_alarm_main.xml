@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/appbar_padding"
+                android:text="@string/new_alarm_page_title"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/alarm_description_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="32dp"
+                    tools:layout_constraintTop_creator="1"
+                    tools:layout_constraintLeft_creator="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                    android:text="@string/alarm_description"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textShortMessage"
+                    android:ems="10"
+                    android:minHeight="32dp"
+                    android:id="@+id/new_alarm_description" android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="@string/date_text"
+                    android:layout_width="wrap_content"
+                    android:minHeight="32dp"
+                    android:layout_height="wrap_content" android:id="@+id/date_text" android:layout_weight="1"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="32dp"
+                    android:ems="10"
+                    android:clickable="true"
+                    android:onClick="setDate"
+                    android:id="@+id/date" android:layout_weight="1" android:focusable="true"/>
+        </LinearLayout>
+        <Button
+                android:text="@string/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/button"
+                android:onClick="addClicked"/>
+    </LinearLayout>
+</LinearLayout>
